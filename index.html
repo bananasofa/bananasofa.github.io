@@ -1,8 +1,316 @@
 <!DOCTYPE html>
-<html lanf="eng">
-    <head><title>Banana Sofa on Github</title>
-    </head>
-    <body>
-        <h1>I will work on this in a second</h1>
-    </body>
+<html>
+   <head>
+      <title>Banana Sofa</title>
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+         @import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Mouse+Memoirs&display=swap");
+         :root {
+         --clr-background: #c6c9ef;
+         --clr-beige-bg: transparent;
+         --clr-pink-bg: #f8e9e9;
+         --clr-yellow-bg: #a6b3c3;
+         --clr-header-text: #f6dcea;
+         --clr-main-text: #f6dcea;
+         --clr-features: #dc5dac;
+         --font-primary: "Fira Code", sans-serif;
+         --font-p: "Fira Code", sans-serif;
+         --fw-main: 300;
+         --fw-bold800: 800;
+         --fs-small: 1rem;
+         --fs-paragraph: 1rem;
+         }
+         * {
+         box-sizing: border-box;
+         }
+         html,
+         body,
+         h1,
+         h2 {
+         margin: 0px;
+         padding-bottom: 10px;
+         line-height: 1.1;
+         }
+         body {
+         display: grid;
+         padding: 0rem;
+         font-family: 'Inter', sans-serif;
+         font-size: 5rem;
+         font-weight: var(--fw-main);
+         background-image: linear-gradient(to left bottom, #ff55b1, #d44dab, #a947a0, #7f3f90, #58367d, #42316e, #2e2c5e, #1d254d, #182240, #151e32, #151a24, #141517);
+         }
+         header {
+         width: 80%;
+         margin: auto;
+         font-size: var(--fs-small);
+         padding-top: 1rem;
+         color: var(--clr-main-text);
+         }
+         #menu {
+         width: 50%;
+         float: right;
+         text-align: right;
+         }
+         .menuitem {
+         padding: 20px;
+         display: inline-block;
+         color: var(--clr-main-text);
+         text-decoration: none;
+         }
+         .menuitem:hover {
+         color: var(--clr-main-text);
+         border-bottom: 1px solid var(--clr-main-text);
+         padding-bottom: 20px;
+         text-decoration: none;
+         }
+         #logo {
+         width: 50%;
+         text-align: left;
+         padding: 20px;
+         display: inline-block;
+         }
+         main {
+         padding: 0rem;
+         margin-top: 0rem;
+         }
+         p {
+         font-weight: normal;
+         letter-spacing: 1.5;
+         font-family: Arial, Helvetica, sans-serif;
+         line-height: 1.2;
+         }
+         h1 {
+         background: linear-gradient(to left, #ff55b1, #ffffff);
+         -webkit-background-clip: text;
+         background-clip: text;
+         -webkit-text-fill-color: transparent;
+         font-family: 'Inter', sans-serif;
+         font-size: clamp(3rem, 4.5rem, 5rem);
+         letter-spacing: 2px;
+         }
+         h2 {
+         font-size: clamp(1rem, 2rem, 3rem);
+         color: #ffffff;
+         font-weight: var(--fw-main);
+         overflow: hidden;
+         margin-top: 0px;
+         margin-bottom: 0px;
+         letter-spacing: 1px;
+         }
+         h3 {
+         color: var(--clr-features);
+         font-size: clamp(1rem, 1.5rem, 2rem);
+         }
+         .bananaz {
+         background-color: #262b35;
+         padding: 50px;
+         border: solid 10px #2b2e64;
+         max-width: 500px;
+         border-radius: 1rem;
+         min-width: min-content;
+         min-height: min-content;
+         }
+         #photo {
+         border: 1px dashed #ff55b1;
+         padding: 20px;
+         width: 550px;
+         }
+         .character>p:first-of-type {
+         font-size: 1.6rem;
+         line-height: 1.2;
+         font-family: "arial", sans-serif;
+         }
+         a:not([class]) {
+         text-decoration-skip-ink: auto;
+         color: #ec558b;
+         text-decoration: none;
+         }
+         a:hover {
+         text-decoration: underline;
+         }
+         .actual-boxes>*:where(:not(:first-child)) {
+         margin-top: 1.5em;
+         }
+         .actual-boxes img {
+         border-radius: 10px;
+         }
+         .grid-box-bg {
+         background: var(--clr-beige-bg);
+         }
+         .text-dark {
+         color: var(--clr-header-text);
+         }
+         .border-one {
+         border: 10px solid #f8eca8;
+         }
+         .border-two {
+         border: 10px solid #f0ba7c;
+         }
+         .border-three {
+         border: 10px solid #f6a8be;
+         }
+         .border-four {
+         border: 10px solid #f25357;
+         }
+         .border-five {
+         border: 10px solid #f8e9e9;
+         }
+         .border-footer {
+         border: 10px solid #d6b0d3;
+         }
+         .flex {
+         display: flex;
+         gap: 1rem;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         }
+         .character-grid {
+         max-width: 80%;
+         display: grid;
+         grid-template-areas: "one""two""three""four""five""footer";
+         grid-auto-columns: 1fr;
+         padding-block: 1rem;
+         margin-inline: auto;
+         margin-top: 3rem;
+         gap: 2rem;
+         }
+         .character {
+         font-size: var(--fs-paragraph);
+         padding: 0;
+         border-radius: 3rem;
+         }
+         .character:nth-child(1) {
+         grid-area: one;
+         }
+         .character:nth-child(2) {
+         grid-area: two;
+         }
+         .character:nth-child(3) {
+         grid-area: three;
+         }
+         .character:nth-child(4) {
+         grid-area: four;
+         }
+         .character:nth-child(5) {
+         grid-area: five;
+         }
+         .character:nth-child(6) {
+         grid-area: footer;
+         }
+         .character img {
+         width: 100%;
+         }
+         .character .grid-name {
+         font-size: 25px;
+         font-weight: var(--fw-main);
+         line-height: 1;
+         }
+         .character .property-grid-name {
+         font-size: var(--fs-small);
+         opacity: 0.9;
+         }
+         button {
+         background-color: #f352ac;
+         padding: 15px;
+         border-radius: 30px;
+         width: 200px;
+         border: 0px;
+         color: var(--clr-main-text);
+         font-weight: var(--fw-bold800);
+         font-size: var(--fs-paragraph);
+         letter-spacing: 2px;
+         text-transform: uppercase;
+         }
+         @media screen and (min-width: 33em) {
+         .character-grid {
+         grid-template-areas:
+         "one"
+         "two"
+         "three"
+         "four"
+         "five"
+         "footer";
+         }
+         }
+         @media screen and (min-width: 50em) {
+         .character-grid {
+         grid-template-areas:
+         "one one two two"
+         "three three four four"
+         "five footer footer footer";
+         }
+         }
+         @media screen and (min-width: 75em) {
+         .character-grid {
+         grid-template-areas:
+         "one one two two"
+         "three three four four"
+         "five footer footer footer";
+         }
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <div id="logo">Banana Sofa</div>
+         <div id="menu">
+            <a class="menuitem" href=#>Home</a>
+            <a class="menuitem" href=http://www.bananasofa.com/blog>Blog</a>
+            <a class="menuitem" href=http://www.bananasofa.com>Portfolio</a>
+         </div>
+      </header>
+      <main class="character-grid">
+         <article class="character actual-boxes grid-box-bg text-dark" style="margin-top: 5rem;">
+            <h1>Hello world,</h1>
+            <h2>I am Michele. I am a front-end designer who doodles a lot and I am based in Canada.</h2>
+            <p>Explore my <a href=/blog>blog</a>, <a href=http://www.bananasofa.com/blog/wordpressthemes>wordpress themes</a> and <a href=http://www.bananasofa.com/blog/portfolio/>illustrations.</a></p>
+            <a href="http://www.bananasofa.com">
+            <button> my work </button></a>
+         </article>
+         <article class=" character actual-boxes grid-box-bg text-dark">
+            <img src="https://www.michelecristina.com/bearcoding.png" style="min-width:500px; width:100%;">
+         </article>
+         <article class="character actual-boxes grid-box-bg text-dark">
+            <div class="bananaz">
+               <h2>Wordpress themes</h2>
+               <p>I have been creating wordpress themes since day one. Oh, the perks of being old! I have recently (very recently, actually) decided to
+                  create new themes to share with the world, so, check them out! 
+               </p><a href="https://www.bananasofa.com/blog/my-work">
+               <button>go to themes</button></a>
+            </div>
+         </article>
+         <article class="character actual-boxes grid-box-bg text-dark">
+            <div class="bananaz">
+               <h2>Stop by the Blog</h2>
+               <p>I love having conversations about front-end AND making notes for myself. This is what my blog is! Conversations and notes about front-end design and development... with the eventual graphic design!</p>
+               <a href="https://www.bananasofa.com/blog">
+               <button>go to blog</button></a>
+            </div>
+         </article>
+         <article class="character actual-boxes grid-box-bg text-dark">
+            <p>About me </p>
+            <p> 
+               Site:
+               <a href=http://www.michelecristina.com>Michele Cristina</a><br>Instagram:
+               <a href="http://www.instagran.com/shelversussofa">@shelversussofa</a>
+            </p>
+         </article>
+         <article class="character actual-boxes grid-box-bg text-dark">
+            <p> Please, give credit</p>
+            <p> This website has been created, designed, developed and is maintained by <a href=http://www.michelecristina.com>Michele Cristina</a> from 
+               <a href="http://www.bananasofa.com">BananaSofa.com</a>.
+               All Illustrations were created by me. Please, give me credit if you use any of my tools.
+               You can contact me at <a href=mailto:hello@michelecristina.com>hello@michelecristina.com</a> or follow me around on social.
+            </p>
+            <p>
+               Follow me on <a href="http://www.github.com/banansofa">github</a> /
+               <a href="http://www.github.com/banansofa">twitter</a> /
+               <a href="http://www.github.com/banansofa">behance</a> /
+               <a href="http://www.codepen.io/banansofa">codepen</a> /
+               <a href="http://www.instagran.com/bananasofah">instagram</a>
+            </p>
+         </article>
+      </main>
+   </body>
 </html>
